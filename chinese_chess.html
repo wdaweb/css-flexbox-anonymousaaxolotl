@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: '標楷體';
+        }
+
+        .all {
+            width: 1100px;
+            height: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .container {
+            width: 840px;
+            height: 920px;
+            margin: auto;
+            /* background: gray; */
+            display: flex;
+            border: 2px solid #000;
+        }
+
+        .board {
+            display: flex;
+            width: 656px;
+            height: 736px;
+            /* background: lightblue; */
+            margin: auto;
+            flex-wrap: wrap;
+            flex-direction: row;
+            border: 1px solid #000;
+
+        }
+
+
+        .a {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #000;
+            position: relative;
+
+        }
+
+        .left::before {
+            content: "";
+            width: 141%;
+            height: 2px;
+            position: absolute;
+            background: #000;
+            transform: rotate(45deg);
+            transform-origin: left top;
+        }
+
+        .right::before {
+            content: "";
+            width: 141%;
+            height: 2px;
+            position: absolute;
+            background: #000;
+            transform: rotate(-45deg);
+            transform-origin: right top;
+            top: 0;
+            right: 0;
+        }
+
+        .b {
+            width: 656px;
+            height: 80px;
+            border: 1px solid #000;
+            font-size: 54px;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .piece {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: #FFF;
+            color: #000;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .piece-c {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: #FFF;
+            color: #000;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 80px;
+            transform: translate(-50%, -50%);
+        }
+
+        .red {
+            color: red;
+        }
+
+        .piece-r {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: #FFF;
+            color: red;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .piece-d {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: #FFF;
+            color: red;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            transform: translate(-50%, -50%);
+        }
+
+        .side-text {
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            writing-mode: vertical-rl;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="side-text">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
+        <div class="container">
+            <div class="board">
+
+                <div class="a">
+                    <div class="piece">車</div>
+                </div>
+                <div class="a">
+                    <div class="piece">馬</div>
+                </div>
+                <div class="a">
+                    <div class="piece">象</div>
+                </div>
+                <div class="a left">
+                    <div class="piece">士</div>
+                </div>
+                <div class="a right">
+                    <div class="piece">將</div>
+                </div>
+                <div class="a">
+                    <div class="piece">士</div>
+                </div>
+                <div class="a">
+                    <div class="piece">象</div>
+                </div>
+                <div class="a">
+                    <div class="piece">馬</div>
+                    <div class="piece-c">車</div>
+                </div>
+
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a right"></div>
+                <div class="a left"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece">包</div>
+                </div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece">包</div>
+                </div>
+
+                <div class="a">
+                    <div class="piece">卒</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece">卒</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece">卒</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece">卒</div>
+                </div>
+                <div class="a">
+                    <div class="piece-c">卒</div>
+                </div>
+
+                <div class="b">
+                    <div>楚河</div>
+                    <div></div>
+                    <div>漢界</div>
+                </div>
+
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+
+                <div class="a">
+                    <div class="piece red">兵</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece red">兵</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece red">兵</div>
+                </div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece red">兵</div>
+                </div>
+                <div class="a">
+                    <div class="piece-c red">兵</div>
+                </div>
+
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece red">炮</div>
+                </div>
+                <div class="a"></div>
+                <div class="a left"></div>
+                <div class="a right"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a">
+                    <div class="piece red">炮</div>
+                </div>
+
+                <div class="a">
+                    <div class="piece-r">俥</div>
+                </div>
+                <div class="a">
+                    <div class="piece-r">傌</div>
+                </div>
+                <div class="a">
+                    <div class="piece-r">相</div>
+                </div>
+                <div class="a right">
+                    <div class="piece-r">仕</div>
+                </div>
+                <div class="a left">
+                    <div class="piece-r">帥</div>
+                </div>
+                <div class="a">
+                    <div class="piece-r">仕</div>
+                </div>
+                <div class="a">
+                    <div class="piece-r">相</div>
+                </div>
+                <div class="a">
+                    <div class="piece-r">傌</div>
+                    <div class="piece-d">俥</div>
+                </div>
+            </div>
+        </div>
+        <div class="side-text">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</div>
+    </div>
+    </div>
+</body>
+
+</html>
